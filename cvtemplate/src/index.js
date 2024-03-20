@@ -6,3 +6,4 @@ import './js/particles.js';
 import '../node_modules/typed.js/dist/typed.umd.js'
 
 import './js/main.js';
+import "./js/skill.js";
