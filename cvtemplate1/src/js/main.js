@@ -1,3 +1,5 @@
+import GLightbox from 'glightbox';
+
 (function () {
     "use strict";
 
@@ -172,9 +174,9 @@
     /**
      * Initiate portfolio lightbox 
      */
-    // const portfolioLightbox = GLightbox({
-    //   selector: '.portfolio-lightbox'
-    // });
+    const portfolioLightbox = GLightbox({
+      selector: '.portfolio-lightbox'
+    });
 
     /**
      * Testimonials slider
@@ -226,11 +228,7 @@
      */
     // new PureCounter();
 
-})()
-
-
-(function () {
-    'use strict'
+    // Validare
     const forms = document.querySelectorAll('.requires-validation')
     Array.from(forms)
         .forEach(function (form) {
@@ -242,5 +240,55 @@
 
                 form.classList.add('was-validated')
             }, false)
-        })
-})()
+        });
+
+    // about skill
+    // var langs = {
+    //     "html": "100%",
+    //     "css": "90%",
+    //     "javascript": "70%",
+    //     "php": "55%",
+    //     "angular": "65%"
+    // };
+
+    // var multiply = 4;
+    // var offsetTop = document.getElementById('skill-about').offsetTop;
+
+    // window.addEventListener('scroll', function () {
+    //     var height = window.innerHeight;
+    //     if (window.scrollY + height > offsetTop) {
+    //         // Iterăm prin fiecare limbaj din obiectul lang
+    //         for (var language in langs) {
+    //             if (langs.hasOwnProperty(language)) {
+    //                 // Se creează un timeout pentru a seta valoarea fiecărui element HTML cu id-ul corespunzător
+    //                 setTimeout(function (language) {
+    //                     return function () {
+    //                         var skillbarBar = document.getElementById(language);
+    //                        // animateSkillBar(skillbarBar, langs[language]);
+    //                         document.getElementById(language + '-pourcent').innerHTML = langs[language];
+    //                     };
+    //                 }(language), 700 * multiply);
+
+    //                 multiply++;
+    //             }
+    //         }
+
+    //     }
+    // });
+    function animateSkillBar(skillbarBar, percent) {
+        var width = 0;
+        var interval = setInterval(frame, 20);
+        function frame() {
+            if (width >= parseInt(percent)) {
+                clearInterval(interval);
+            } else {
+                width++;
+                skillbarBar.style.width = width + '%';
+            }
+        }
+    }
+
+
+
+})();
+

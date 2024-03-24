@@ -51,12 +51,13 @@ $progressbar-title-color: #fff;
 
 $background-color_1: #ffffff;
 $background-color_2: $color_3;
-$background-color_3: $color_2;
+$background-color_3: $color_4;
 $background-color_4: #0062d3;
 $background-color_5: transparent;
-$background-color_6: #2ad300;
-$background-color_7: transparent;
-$background-color_8: transparent;
+$background-color_6: #0062d3;
+$background-color_7: #292c2f3c;
+$background-color_8: #0062d3;
+$background-color_9: #0062d3;
 
 $li-padding: 5px;
 $btn-color: $vueColor;
@@ -77,6 +78,8 @@ $dm-text-color-secondary: rgba(256, 256, 256, 0.7);
 
 //*************************** Theme Styles ****************************/
 // Import theme styles
+@import "../../node_modules/glightbox/dist/css/glightbox.min.css";
+
 
 @import "general";
 @import "base";
@@ -84,10 +87,11 @@ $dm-text-color-secondary: rgba(256, 256, 256, 0.7);
 @import "banner";
 @import "social";
 @import "about";
-// @import "experience";
+@import "experience";
+@import "portfolio";
 @import "contact";
 @import "footer";
 
 // @import "dark-mode";
 
-// @import "tot";
+@import "tot";
