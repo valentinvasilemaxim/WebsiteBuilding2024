@@ -57,7 +57,7 @@ function showData(repos) {
 
 $(function () {
     console.log("ready!");
-    getData('valentinvasilemaxim').then((myRepos) => {
+    getData("valentinvasilemaxim").then((myRepos) => {
         showData(myRepos);
         console.log('succes ', myRepos);
     }).catch((err) => {
